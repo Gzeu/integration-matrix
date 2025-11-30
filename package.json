@@ -1,0 +1,43 @@
+{
+  "name": "integration-matrix",
+  "version": "1.0.0",
+  "description": "API Integration Testing Framework - 20 free APIs pre-configured with validation, benchmarks, retry logic, and circuit breaker patterns",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:integration": "jest --testPathPattern=integration",
+    "benchmark": "tsx src/benchmark-runner.ts",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'"
+  },
+  "keywords": [
+    "api",
+    "integration",
+    "testing",
+    "circuit-breaker",
+    "retry",
+    "benchmark",
+    "validation"
+  ],
+  "author": "Gzeu",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "zod": "^3.23.6"
+  }
+}
